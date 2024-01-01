@@ -1,10 +1,58 @@
 import AnimatedPage from "../components/AnimatedPage.jsx";
+import { Link } from "react-router-dom";
 
 export default function About() {
   return (
     <AnimatedPage>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <p>Welcome to my page! Feel free to have a look around.</p>
+      <div className="bg-black text-center p-8 min-h-screen">
+        <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+          I am Furkan.
+        </h1>
+        <h2 className="mb-6 text-3xl font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+          Young & passionate software developer.
+        </h2>
+
+        <p className="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+          My preferred software tools are{" "}
+          <a href="https://www.java.com/en/" target="_blank" rel="noreferrer">
+            <code>Java</code>
+          </a>
+          ,{" "}
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <code>JavaScript</code>
+          </a>{" "}
+          and{" "}
+          <a href="https://www.python.org/" target="_blank" rel="noreferrer">
+            <code>Python</code>
+          </a>
+          .
+        </p>
+        <Link
+          to="/about"
+          className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+        >
+          Learn more about me
+          <svg
+            className="w-3.5 h-3.5 ms-2 rtl:rotate-180"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 14 10"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg>
+        </Link>
+      </div>
     </AnimatedPage>
   );
 }

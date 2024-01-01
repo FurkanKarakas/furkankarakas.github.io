@@ -10,15 +10,13 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="container">
-        <AnimatePresence mode="wait">
-          <Routes key={location.pathname} location={location}>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/blog" element={<Blog />} />
-          </Routes>
-        </AnimatePresence>
-      </div>
+      <AnimatePresence mode="wait">
+        <Routes key={location.pathname} location={location}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
+        </Routes>
+      </AnimatePresence>
     </>
   );
 }
