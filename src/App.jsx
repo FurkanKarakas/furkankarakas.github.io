@@ -8,7 +8,7 @@ import Navbar from "./pages/Navbar.jsx";
 function App() {
   const location = useLocation();
   return (
-    <>
+    <div className="overflow-x-clip">
       <Navbar />
       <AnimatePresence mode="wait">
         <Routes key={location.pathname} location={location}>
@@ -17,7 +17,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
         </Routes>
       </AnimatePresence>
-    </>
+    </div>
   );
 }
 
