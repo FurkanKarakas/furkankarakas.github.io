@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 export default function About() {
   return (
     <AnimatedPage>
-      <div className="min-h-screen bg-black p-8 text-center">
-        <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+      <div className="min-h-screen p-8 text-center">
+        <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white">
           I am Furkan.
         </h1>
-        <h2 className="mb-6 text-3xl font-normal text-gray-500 sm:px-16 lg:text-xl xl:px-48 dark:text-gray-400">
+        <h2 className="mb-6 text-3xl font-normal text-gray-200">
           Young & passionate software developer.
         </h2>
 
-        <p className="mb-6 text-lg font-normal text-gray-500 sm:px-16 lg:text-xl xl:px-48 dark:text-gray-400">
+        <p className="mb-6 text-lg font-normal text-gray-200">
           My preferred software tools are{" "}
           <a href="https://www.java.com/en/" target="_blank" rel="noreferrer">
             <code>Java</code>
@@ -33,7 +33,7 @@ export default function About() {
         </p>
         <Link
           to="/about"
-          className="inline-flex items-center justify-center rounded-lg bg-blue-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"
+          className="inline-flex items-center justify-center rounded-lg bg-blue-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
         >
           Learn more about me
           <svg
