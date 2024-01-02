@@ -7,8 +7,10 @@ export default function Contact() {
     subject: "",
     message: "",
   });
+  const [message, setMessage] = useState(null);
 
   const handleFormChange = (field, value) => {
+    setMessage(null);
     const formFieldsNew = { ...formFields };
     formFieldsNew[field] = value;
     setFormFields(formFieldsNew);
@@ -26,7 +28,10 @@ export default function Contact() {
       From: "fkarakasster@gmail.com",
       Subject: formFields.subject,
       Body: body,
-    }).then((message) => alert(message));
+    })
+      .then((message) => setMessage(message))
+      .then(() => new Promise((resolve) => setTimeout(resolve, 10000)))
+      .then(() => setMessage(null));
   };
 
   return (
@@ -39,7 +44,11 @@ export default function Contact() {
           <p className="mb-8 text-center font-light  text-gray-400 sm:text-xl lg:mb-16">
             Would you like to know something more about me? Let me know!
           </p>
-          <form onSubmit={(e) => handleFormSubmit(e)} className="space-y-8">
+          <form
+            autoComplete="off"
+            onSubmit={(e) => handleFormSubmit(e)}
+            className="space-y-8"
+          >
             <div>
               <label
                 htmlFor="email"
@@ -49,6 +58,7 @@ export default function Contact() {
               </label>
               <input
                 type="email"
+                autoComplete="off"
                 onChange={(e) => handleFormChange("email", e.target.value)}
                 id="email"
                 className="focus:ring-primary-500 focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500 shadow-sm-light block w-full rounded-lg border   border-gray-600 bg-gray-700  p-2.5 text-sm text-white placeholder-gray-400 shadow-sm"
@@ -85,6 +95,7 @@ export default function Contact() {
                 rows="6"
                 className="focus:ring-primary-500 focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500 block w-full rounded-lg border border-gray-300  bg-gray-700 p-2.5 text-sm text-white placeholder-gray-400 shadow-sm"
                 placeholder="Leave a comment..."
+                required
               ></textarea>
             </div>
             <button
@@ -93,6 +104,15 @@ export default function Contact() {
             >
               Send message
             </button>
+            <p
+              className={`ml-5 inline text-sm ${
+                message === "OK" ? "text-green-400" : "text-red-700"
+              }`}
+            >
+              {message === "OK"
+                ? "Your message was sent successfully. I will be getting in touch with you soon!"
+                : message}
+            </p>
           </form>
         </div>
       </section>
