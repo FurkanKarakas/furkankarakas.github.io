@@ -1,9 +1,0 @@
-@counter-style repeating-emoji {
-  system: cyclic;
-  symbols: "👍" "🙌" "👌" "✍️";
-  suffix: " ";
-}
-
-.repeating-counter-rule {
-  list-style-type: repeating-emoji;
-}
