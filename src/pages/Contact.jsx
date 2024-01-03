@@ -63,6 +63,7 @@ export default function Contact() {
                 id="email"
                 className="focus:ring-primary-500 focus:border-primary-500 focus:ring-primary-500 focus:border-primary-500 shadow-sm-light block w-full rounded-lg border   border-gray-600 bg-gray-700  p-2.5 text-sm text-white placeholder-gray-400 shadow-sm"
                 placeholder="example@gmail.com"
+                title="Please enter the email address in the form x@y"
                 required
               />
             </div>
@@ -98,21 +99,23 @@ export default function Contact() {
                 required
               ></textarea>
             </div>
-            <button
-              type="submit"
-              className="rounded-lg bg-gray-700 px-5 py-3 text-center text-sm font-medium text-white hover:bg-gray-500 focus:outline-none focus:ring-4 sm:w-fit"
-            >
-              Send message
-            </button>
-            <p
-              className={`ml-5 inline text-sm ${
-                message === "OK" ? "text-green-400" : "text-red-700"
-              }`}
-            >
-              {message === "OK"
-                ? "Your message was sent successfully. I will be getting in touch with you soon!"
-                : message}
-            </p>
+            <div className="flex items-center gap-x-4">
+              <button
+                type="submit"
+                className="flex-shrink-0 rounded-lg bg-gray-700 px-5 py-3 text-center text-sm font-medium text-white hover:bg-gray-500 focus:outline-none focus:ring-4 sm:w-fit"
+              >
+                Send message
+              </button>
+              <p
+                className={`text-sm ${
+                  message === "OK" ? "text-green-400" : "text-red-700"
+                }`}
+              >
+                {message === "OK"
+                  ? "Your message was sent successfully. I will be getting in touch with you soon!"
+                  : message}
+              </p>
+            </div>
           </form>
         </div>
       </section>
