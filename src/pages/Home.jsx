@@ -1,7 +1,7 @@
 import AnimatedPage from "../components/AnimatedPage.jsx";
 import { Link } from "react-router-dom";
 
-export default function About() {
+export default function Home() {  
   return (
     <AnimatedPage>
       <div className="min-h-screen p-8 text-center">
