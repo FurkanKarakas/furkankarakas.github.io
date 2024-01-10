@@ -1,7 +1,7 @@
 import AnimatedPage from "../components/AnimatedPage.jsx";
 import { Link } from "react-router-dom";
 
-export default function Home() {  
+export default function Home() {
   return (
     <AnimatedPage>
       <div className="min-h-screen p-8 text-center">
@@ -33,7 +33,7 @@ export default function Home() {
         </p>
         <Link
           to="/about"
-          className="inline-flex items-center justify-center rounded-lg bg-blue-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+          className="inline-flex items-center justify-center rounded-lg border-2 border-amber-50 bg-blue-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
         >
           Learn more about me
           <svg
