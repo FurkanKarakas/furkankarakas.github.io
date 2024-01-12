@@ -9,7 +9,7 @@ import Contact from "./pages/Contact.jsx";
 function App() {
   const location = useLocation();
   return (
-    <div className="min-h-screen overflow-x-clip bg-gray-900">
+    <div className="min-h-screen overflow-hidden bg-gray-900">
       <Navbar />
       <AnimatePresence mode="wait">
         <Routes key={location.pathname} location={location}>
