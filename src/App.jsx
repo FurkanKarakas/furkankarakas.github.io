@@ -5,6 +5,7 @@ import About from "./pages/About.jsx";
 import Blog from "./pages/Blog.jsx";
 import Navbar from "./pages/Navbar.jsx";
 import Contact from "./pages/Contact.jsx";
+import Footer from "./pages/Footer.jsx";
 
 function App() {
   const location = useLocation();
@@ -19,6 +20,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
         </Routes>
       </AnimatePresence>
+      <Footer />
     </div>
   );
 }
