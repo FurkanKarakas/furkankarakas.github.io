@@ -4,14 +4,13 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <AnimatedPage>
-      <div className="min-h-screen p-8 text-center">
+      <div className="p-8 text-center">
         <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white">
           I am Furkan.
         </h1>
         <h2 className="mb-6 text-3xl font-normal text-gray-200">
           Young & passionate software developer.
         </h2>
-
         <p className="mb-6 text-lg font-normal text-gray-200">
           My preferred software tools are{" "}
           <a href="https://www.java.com/en/" target="_blank" rel="noreferrer">

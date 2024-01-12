@@ -1,10 +1,10 @@
 import AnimatedPage from "../components/AnimatedPage.jsx";
-import "../styles.css";
+import "../styles/styles.css";
 
 export default function About() {
   return (
     <AnimatedPage>
-      <div className="min-h-screen p-8 text-center">
+      <div className="p-8 text-center">
         <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white">
           About
         </h1>
