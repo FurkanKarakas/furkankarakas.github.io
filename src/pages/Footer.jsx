@@ -2,12 +2,10 @@
 
 export default function Footer() {
   return (
-    <footer className="fixed bottom-0 left-0 w-full bg-gray-800">
-      <div className="mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-        <span className="text-l text-gray-300 sm:text-center">
-          2024 - Furkan Karakas
-        </span>
-        <ul className="mt-3 flex flex-wrap items-center space-x-2 text-sm font-medium text-gray-300 sm:mt-0">
+    <footer className="fixed bottom-0 left-0 flex max-h-16 w-full items-center justify-between bg-gray-800 px-10 py-3">
+      <span className="text-sm text-gray-300">2024 - Furkan Karakas</span>
+      <ul className="flex flex-wrap items-center justify-center space-x-5 text-xs font-medium text-gray-300">
+        <li className="flex flex-wrap items-center justify-center space-x-2">
           <svg
             fill="#fff"
             height="2rem"
@@ -38,15 +36,15 @@ export default function Footer() {
               </g>
             </g>
           </svg>
-          <li>
-            <a
-              href="mailto:fkarakasster@gmail.com"
-              className="me-4 hover:underline md:me-6"
-            >
-              fkarakasster@gmail.com
-            </a>
-          </li>
+          <a
+            href="mailto:fkarakasster@gmail.com"
+            className="me-4 hover:underline md:me-6"
+          >
+            fkarakasster@gmail.com
+          </a>
+        </li>
 
+        <li className="flex flex-wrap items-center justify-center space-x-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="2.5rem"
@@ -58,18 +56,16 @@ export default function Footer() {
               <path d="M335.895 447.859c-61.838 0-111.966-50.128-111.966-111.964 0-61.838 50.128-111.966 111.966-111.966 61.836 0 111.964 50.128 111.964 111.966 0 61.836-50.128 111.964-111.964 111.964zm0-284.451c-95.263 0-172.487 77.224-172.487 172.487 0 95.261 77.224 172.485 172.487 172.485 95.261 0 172.485-77.224 172.485-172.485 0-95.263-77.224-172.487-172.485-172.487m219.608-6.815c0 22.262-18.047 40.307-40.308 40.307-22.26 0-40.307-18.045-40.307-40.307 0-22.261 18.047-40.308 40.307-40.308 22.261 0 40.308 18.047 40.308 40.308" />
             </g>
           </svg>
-          <li>
-            <a
-              href="https://www.instagram.com/furkan.karakas95/"
-              target="_blank"
-              rel="noreferrer"
-              className="me-4 hover:underline md:me-6"
-            >
-              @furkan.karakas95
-            </a>
-          </li>
-        </ul>
-      </div>
+          <a
+            href="https://www.instagram.com/furkan.karakas95/"
+            target="_blank"
+            rel="noreferrer"
+            className="me-4 hover:underline md:me-6"
+          >
+            @furkan.karakas95
+          </a>
+        </li>
+      </ul>
     </footer>
   );
 }
