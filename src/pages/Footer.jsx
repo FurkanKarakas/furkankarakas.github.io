@@ -1,6 +1,9 @@
 // noinspection SpellCheckingInspection
 
 export default function Footer() {
+  const subject = encodeURI("Hi Furkan!");
+  const body = encodeURI("Hi Furkan, let us have a chat!");
+
   return (
     <footer className="fixed bottom-0 left-0 flex max-h-16 w-full items-center justify-between bg-gray-800 px-10 py-3">
       <span className="text-sm text-gray-300">2024 - Furkan Karakas</span>
@@ -37,7 +40,7 @@ export default function Footer() {
             </g>
           </svg>
           <a
-            href="mailto:fkarakasster@gmail.com"
+            href={`mailto:fkarakasster@gmail.com?subject=${subject}&body=${body}`}
             className="me-4 hover:underline md:me-6"
           >
             fkarakasster@gmail.com
