@@ -4,7 +4,7 @@ import "../styles/styles.css";
 export default function About() {
   return (
     <AnimatedPage>
-      <div className="p-8 text-center">
+      <div className="mx-2 mb-14 mt-4 text-center md:mx-48">
         <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white">
           About
         </h1>
@@ -14,7 +14,7 @@ export default function About() {
           about creating exciting projects.
         </p>
 
-        <section className="text-purple-100">
+        <section className="text-slate-200">
           <h2 className="mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-200">
             Work Experience
           </h2>
@@ -66,7 +66,7 @@ export default function About() {
           </section>
         </section>
 
-        <section className="text-violet-50">
+        <section className="text-zinc-50">
           <h2 className="mb-4 text-2xl font-extrabold leading-none tracking-tight text-gray-200">
             Education
           </h2>

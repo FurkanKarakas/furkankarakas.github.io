@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   return (
     <AnimatedPage>
-      <div className="p-8 text-center">
+      <div className="mt-4 text-center">
         <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white">
           I am Furkan.
         </h1>
