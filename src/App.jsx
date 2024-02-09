@@ -6,11 +6,20 @@ import Blog from "./pages/Blog.jsx";
 import Navbar from "./pages/Navbar.jsx";
 import Contact from "./pages/Contact.jsx";
 import Footer from "./pages/Footer.jsx";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+
+const darkTheme = createTheme({
+  palette: {
+    mode: "dark",
+  },
+});
 
 function App() {
   const location = useLocation();
   return (
-    <div className="mb-12 min-h-screen overflow-hidden bg-gray-900">
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
       <Navbar />
       <AnimatePresence mode="wait">
         <Routes key={location.pathname} location={location}>
@@ -21,7 +30,7 @@ function App() {
         </Routes>
       </AnimatePresence>
       <Footer />
-    </div>
+    </ThemeProvider>
   );
 }
 

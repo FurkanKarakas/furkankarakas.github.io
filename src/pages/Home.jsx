@@ -1,17 +1,16 @@
+import { Container, Typography } from "@mui/material";
 import AnimatedPage from "../components/AnimatedPage.jsx";
 import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
     <AnimatedPage>
-      <div className="mt-4 text-center">
-        <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white">
-          I am Furkan.
-        </h1>
-        <h2 className="mb-6 text-3xl font-normal text-gray-200">
+      <Container>
+        <Typography variant="h1">I am Furkan.</Typography>
+        <Typography variant="h2">
           Young & passionate software developer.
-        </h2>
-        <p className="mb-6 text-lg font-normal text-gray-200">
+        </Typography>
+        <Typography variant="body1">
           My preferred software tools are{" "}
           <a href="https://www.java.com/en/" target="_blank" rel="noreferrer">
             <code>Java</code>
@@ -29,7 +28,7 @@ export default function Home() {
             <code>Python</code>
           </a>
           .
-        </p>
+        </Typography>
         <Link
           to="/about"
           className="inline-flex items-center justify-center rounded-lg border-2 border-amber-50 bg-blue-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
@@ -51,7 +50,7 @@ export default function Home() {
             />
           </svg>
         </Link>
-      </div>
+      </Container>
     </AnimatedPage>
   );
 }
