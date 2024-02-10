@@ -1,55 +1,44 @@
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, Button, Link } from "@mui/material";
 import AnimatedPage from "../components/AnimatedPage.jsx";
-import { Link } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export default function Home() {
   return (
     <AnimatedPage>
       <Container>
-        <Typography variant="h1">I am Furkan.</Typography>
-        <Typography variant="h2">
+        <Typography variant="h1" gutterBottom>
+          I am Furkan.
+        </Typography>
+        <Typography variant="h2" gutterBottom>
           Young & passionate software developer.
         </Typography>
-        <Typography variant="body1">
+        <Typography variant="body1" gutterBottom>
           My preferred software tools are{" "}
-          <a href="https://www.java.com/en/" target="_blank" rel="noreferrer">
+          <Link href="https://www.java.com/en/" target="_blank">
             <code>Java</code>
-          </a>
+          </Link>
           ,{" "}
-          <a
+          <Link
             href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
             target="_blank"
-            rel="noreferrer"
           >
             <code>JavaScript</code>
-          </a>{" "}
+          </Link>{" "}
           and{" "}
-          <a href="https://www.python.org/" target="_blank" rel="noreferrer">
+          <Link href="https://www.python.org/" target="_blank">
             <code>Python</code>
-          </a>
+          </Link>
           .
         </Typography>
-        <Link
+        <Button
+          variant="contained"
+          component={RouterLink}
           to="/about"
-          className="inline-flex items-center justify-center rounded-lg border-2 border-amber-50 bg-blue-700 px-5 py-3 text-center text-base font-medium text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"
+          endIcon={<ArrowForwardIcon />}
         >
           Learn more about me
-          <svg
-            className="ms-2 h-3.5 w-3.5 rtl:rotate-180"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 14 10"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M1 5h12m0 0L9 1m4 4L9 9"
-            />
-          </svg>
-        </Link>
+        </Button>
       </Container>
     </AnimatedPage>
   );
