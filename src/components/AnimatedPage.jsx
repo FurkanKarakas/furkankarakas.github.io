@@ -8,7 +8,7 @@ const animations = {
 
 export default function AnimatedPage({ children }) {
   return (
-    <motion.div
+    <motion.main
       variants={animations}
       initial="initial"
       animate="animate"
@@ -16,6 +16,6 @@ export default function AnimatedPage({ children }) {
       transition={{ duration: 0.5 }}
     >
       {children}
-    </motion.div>
+    </motion.main>
   );
 }
