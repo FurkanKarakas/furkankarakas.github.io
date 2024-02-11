@@ -13,7 +13,7 @@ import WebsiteLogo from "/favicon.svg?react";
 
 export default function Navbar() {
   return (
-    <AppBar position="sticky">
+    <AppBar position="sticky" sx={{ marginBottom: 3 }}>
       <Toolbar>
         <IconButton size="large" edge="start" color="inherit" aria-label="logo">
           <SvgIcon component={WebsiteLogo} inheritViewBox />
