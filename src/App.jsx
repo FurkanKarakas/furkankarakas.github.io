@@ -8,6 +8,7 @@ import Contact from "./pages/Contact.jsx";
 import Footer from "./pages/Footer.jsx";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
+import { Box } from "@mui/material";
 
 const darkTheme = createTheme({
   palette: {
@@ -20,16 +21,25 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <Navbar />
-      <AnimatePresence mode="wait">
-        <Routes key={location.pathname} location={location}>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/blog" element={<Blog />} />
-        </Routes>
-      </AnimatePresence>
-      <Footer />
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          minHeight: "100vh",
+          overflowX: "clip",
+        }}
+      >
+        <Navbar />
+        <AnimatePresence mode="wait">
+          <Routes key={location.pathname} location={location}>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
+          </Routes>
+        </AnimatePresence>
+        <Footer />
+      </Box>
     </ThemeProvider>
   );
 }
