@@ -9,10 +9,22 @@ import Footer from "./pages/Footer.jsx";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { Box } from "@mui/material";
+import darkScrollbar from "@mui/material/darkScrollbar";
 
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
+  },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        html: {
+          ...darkScrollbar(),
+          //scrollbarWidth for Firefox
+          scrollbarWidth: "thin",
+        },
+      },
+    },
   },
 });
 

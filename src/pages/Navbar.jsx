@@ -10,14 +10,29 @@ import {
   Typography,
 } from "@mui/material";
 import WebsiteLogo from "/favicon.svg?react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [rotate, setRotate] = useState(false);
+
   return (
     <AppBar position="sticky" sx={{ marginBottom: 3 }}>
       <Toolbar>
-        <IconButton size="large" edge="start" color="inherit" aria-label="logo">
-          <SvgIcon component={WebsiteLogo} inheritViewBox />
-        </IconButton>
+        <motion.div
+          animate={{ rotate: rotate ? 360 : 0 }}
+          transition={{ duration: 1.0 }}
+          onClick={() => setRotate(!rotate)}
+        >
+          <IconButton
+            size="large"
+            edge="start"
+            color="inherit"
+            aria-label="logo"
+          >
+            <SvgIcon component={WebsiteLogo} inheritViewBox />
+          </IconButton>
+        </motion.div>
 
         <Typography sx={{ flexGrow: 1 }} variant="h6" component="div">
           Personal Website
