@@ -1,6 +1,5 @@
 import { Link as RouterLink } from "react-router-dom";
 import {
-  Link,
   AppBar,
   Toolbar,
   IconButton,
@@ -8,6 +7,7 @@ import {
   Stack,
   Divider,
   Typography,
+  Button,
 } from "@mui/material";
 import WebsiteLogo from "/favicon.svg?react";
 import { motion } from "framer-motion";
@@ -44,21 +44,21 @@ export default function Navbar() {
           divider={<Divider orientation="vertical" flexItem />}
           justifyContent="flex-end"
         >
-          <Link to="/" component={RouterLink}>
+          <Button to="/" variant={"text"} component={RouterLink}>
             Home
-          </Link>
+          </Button>
 
-          <Link to="/about" component={RouterLink}>
+          <Button to="/about" variant={"text"} component={RouterLink}>
             About
-          </Link>
+          </Button>
 
-          <Link to="/contact" component={RouterLink}>
+          <Button to="/contact" variant={"text"} component={RouterLink}>
             Contact
-          </Link>
+          </Button>
 
-          <Link to="/blog" component={RouterLink}>
+          <Button to="/blog" variant={"text"} component={RouterLink}>
             Blog Posts
-          </Link>
+          </Button>
         </Stack>
       </Toolbar>
     </AppBar>

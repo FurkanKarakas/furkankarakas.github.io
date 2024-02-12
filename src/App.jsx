@@ -10,10 +10,15 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { Box } from "@mui/material";
 import darkScrollbar from "@mui/material/darkScrollbar";
+import { blueGrey } from "@mui/material/colors";
 
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
+    background: {
+      default: blueGrey[900],
+      paper: blueGrey[900],
+    },
   },
   components: {
     MuiCssBaseline: {
@@ -50,7 +55,7 @@ function App() {
             <Route path="/blog" element={<Blog />} />
           </Routes>
         </AnimatePresence>
-        <Footer />
+        <Footer marginBottom={"auto"} />
       </Box>
     </ThemeProvider>
   );

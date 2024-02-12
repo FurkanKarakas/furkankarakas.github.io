@@ -4,7 +4,7 @@ import { Copyright, Email, Instagram } from "@mui/icons-material";
 import { Box, Typography, Link, Stack } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 
-export default function Footer() {
+export default function Footer({ marginBottom }) {
   const subject = encodeURI("Hi Furkan!");
   const body = encodeURI("Hi Furkan, let us have a chat!");
 
@@ -13,7 +13,7 @@ export default function Footer() {
       component="footer"
       sx={{
         borderTop: "2px solid #fff",
-        marginTop: "auto",
+        marginTop: marginBottom,
         p: 3,
       }}
     >
