@@ -6,15 +6,15 @@
   "scripts": {
     "dev": "vite",
     "start": "vite",
-    "build": "vite build",
+    "build": "vite build && cp dist/index.html dist/404.html",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.15.9",
-    "@mui/material": "^5.15.9",
+    "@mui/icons-material": "^5.15.10",
+    "@mui/material": "^5.15.10",
     "framer-motion": "^10.16.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

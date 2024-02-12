@@ -76,7 +76,7 @@ export default function Contact() {
               <TextField
                 fullWidth
                 required
-                id={"email-address"}
+                id={"email"}
                 name={"email"}
                 label={"Email address"}
                 value={email}
@@ -84,6 +84,7 @@ export default function Contact() {
                 aria-describedby={"email-helper-text"}
                 type={"email"}
                 inputProps={{ spellCheck: "false" }}
+                autoComplete={"on"}
               />
               <FormHelperText id={"email-helper-text"}>
                 I will never share your email.
@@ -94,7 +95,7 @@ export default function Contact() {
               <TextField
                 fullWidth
                 required
-                id={"email-subject"}
+                id={"subject"}
                 name={"subject"}
                 label={"Subject"}
                 value={subject}
@@ -109,15 +110,18 @@ export default function Contact() {
 
             <Grid item>
               <TextField
+                required
                 fullWidth
-                id="email-message"
+                variant={"filled"}
+                id={"message"}
                 name={"message"}
                 label={"Message"}
                 value={message}
                 onChange={(event) => setMessage(event.target.value)}
                 multiline
-                minRows={4}
+                minRows={8}
                 aria-describedby={"message-helper-text"}
+                type={"text"}
               />
               <FormHelperText id={"message-helper-text"}>
                 You can write your message here.
