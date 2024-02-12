@@ -1,9 +1,4 @@
-@counter-style repeating-emoji {
-  system: cyclic;
-  symbols: "👍" "🙌" "👌" "✍️";
-  suffix: " ";
-}
-
-.repeating-counter-rule {
-  list-style-type: repeating-emoji;
+.contact-form {
+    margin-top: 5rem;
+    width: 60vw;
 }

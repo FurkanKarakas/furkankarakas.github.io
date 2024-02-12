@@ -40,6 +40,7 @@ export default function Navbar() {
 
         <Stack
           direction="row"
+          component={"nav"}
           spacing={2}
           divider={<Divider orientation="vertical" flexItem />}
           justifyContent="flex-end"
