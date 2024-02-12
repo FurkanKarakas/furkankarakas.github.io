@@ -17,7 +17,7 @@ export default function Navbar() {
   const [rotate, setRotate] = useState(false);
 
   return (
-    <AppBar position="sticky" sx={{ marginBottom: 3 }}>
+    <AppBar position="sticky">
       <Toolbar>
         <motion.div
           animate={{ rotate: rotate ? 360 : 0 }}
@@ -40,6 +40,7 @@ export default function Navbar() {
 
         <Stack
           direction="row"
+          flexWrap={"wrap"}
           component={"nav"}
           spacing={2}
           divider={<Divider orientation="vertical" flexItem />}

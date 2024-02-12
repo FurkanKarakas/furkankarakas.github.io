@@ -45,6 +45,7 @@ function App() {
           flexDirection: "column",
           minHeight: "100vh",
           overflowX: "clip",
+          gap: 3,
         }}
       >
         <Navbar />
@@ -57,7 +58,7 @@ function App() {
             <Route path="/*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
-        <Footer marginBottom={"auto"} />
+        <Footer marginTop={"auto"} />
       </Box>
     </ThemeProvider>
   );

@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <AnimatedPage>
       <Container>
-        <Typography variant="h1" gutterBottom>
+        <Typography variant="h1" textAlign={"center"} gutterBottom>
           I am Furkan.
         </Typography>
         <Typography variant="h2" gutterBottom>

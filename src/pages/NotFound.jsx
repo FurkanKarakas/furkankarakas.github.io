@@ -1,14 +1,24 @@
 import { Container, Typography } from "@mui/material";
 import AnimatedPage from "../components/AnimatedPage.jsx";
+import DonkeyImage from "../assets/donkey.jpg";
 
 export default function NotFound() {
   return (
     <AnimatedPage>
       <Container>
-        <Typography variant={"h1"}>404</Typography>
-        <Typography variant={"body1"}>
-          The requested URL wasn't found!
+        <Typography variant={"h1"} textAlign={"center"}>
+          404
         </Typography>
+        <Typography variant={"body1"} textAlign={"center"}>
+          The requested URL wasn&apos;t found!
+        </Typography>
+        <img
+          src={DonkeyImage}
+          className="donkey-image"
+          width={"50%"}
+          height={"auto"}
+          alt="Two lovely donkeys"
+        />
       </Container>
     </AnimatedPage>
   );

@@ -5,7 +5,7 @@ export default function Blog() {
   return (
     <AnimatedPage>
       <Container>
-        <Typography variant={"h1"} gutterBottom>
+        <Typography variant={"h1"} textAlign={"center"} gutterBottom>
           Blog
         </Typography>
       </Container>

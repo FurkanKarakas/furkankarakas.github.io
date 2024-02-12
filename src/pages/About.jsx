@@ -47,7 +47,7 @@ export default function About() {
   return (
     <AnimatedPage>
       <Container component={"article"}>
-        <Typography variant={"h1"} gutterBottom>
+        <Typography variant={"h1"} textAlign={"center"} gutterBottom>
           About
         </Typography>
 

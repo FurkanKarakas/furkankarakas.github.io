@@ -6,10 +6,10 @@ import {
   Button,
   Container,
   FormHelperText,
-  Grid,
   Snackbar,
   TextField,
   Typography,
+  Box,
 } from "@mui/material";
 
 export default function Contact() {
@@ -25,7 +25,7 @@ export default function Contact() {
 
     const body = `Sender email: ${email}<br>Sender Message: ${message}`;
 
-    // noinspection JSUnresolvedReference
+    // eslint-disable-next-line no-undef
     Email.send({
       SecureToken: "102323f1-d771-4640-8098-063ade2b62b2",
       To: "fkarakasster@gmail.com",
@@ -53,82 +53,74 @@ export default function Contact() {
   return (
     <AnimatedPage>
       <Container component={"section"}>
-        <Typography variant={"h3"} gutterBottom>
+        <Typography textAlign={"center"} variant={"h3"} gutterBottom>
           Contact Me
         </Typography>
 
-        <Typography variant={"body1"} sx={{ marginBottom: "3rem" }}>
+        <Typography
+          textAlign={"center"}
+          variant={"body1"}
+          sx={{ marginBottom: "3rem" }}
+        >
           Would you like to know something more about me? Let me know!
         </Typography>
 
-        <form
-          className={"contact-form"}
-          onSubmit={(event) => handleFormSubmit(event)}
-        >
-          <Grid
-            container
-            direction={"column"}
-            justify={"center"}
-            align={"center"}
-            spacing={2}
+        <Box display={"flex"} justifyContent={"center"}>
+          <form
+            className={"contact-form"}
+            onSubmit={(event) => handleFormSubmit(event)}
           >
-            <Grid item>
-              <TextField
-                fullWidth
-                required
-                id={"email"}
-                name={"email"}
-                label={"Email address"}
-                value={email}
-                onChange={(event) => setEmail(event.target.value)}
-                aria-describedby={"email-helper-text"}
-                type={"email"}
-                inputProps={{ spellCheck: "false" }}
-                autoComplete={"on"}
-              />
-              <FormHelperText id={"email-helper-text"}>
-                I will never share your email.
-              </FormHelperText>
-            </Grid>
+            <TextField
+              fullWidth
+              required
+              id={"email"}
+              name={"email"}
+              label={"Email address"}
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              aria-describedby={"email-helper-text"}
+              type={"email"}
+              inputProps={{ spellCheck: "false" }}
+              autoComplete={"on"}
+            />
+            <FormHelperText id={"email-helper-text"}>
+              I will never share your email.
+            </FormHelperText>
 
-            <Grid item>
-              <TextField
-                fullWidth
-                required
-                id={"subject"}
-                name={"subject"}
-                label={"Subject"}
-                value={subject}
-                onChange={(event) => setSubject(event.target.value)}
-                aria-describedby={"subject-helper-text"}
-                type={"text"}
-              />
-              <FormHelperText id={"subject-helper-text"}>
-                Subject of the message.
-              </FormHelperText>
-            </Grid>
+            <TextField
+              fullWidth
+              required
+              id={"subject"}
+              name={"subject"}
+              label={"Subject"}
+              value={subject}
+              onChange={(event) => setSubject(event.target.value)}
+              aria-describedby={"subject-helper-text"}
+              type={"text"}
+            />
+            <FormHelperText id={"subject-helper-text"}>
+              Subject of the message.
+            </FormHelperText>
 
-            <Grid item>
-              <TextField
-                required
-                fullWidth
-                variant={"filled"}
-                id={"message"}
-                name={"message"}
-                label={"Message"}
-                value={message}
-                onChange={(event) => setMessage(event.target.value)}
-                multiline
-                minRows={8}
-                aria-describedby={"message-helper-text"}
-                type={"text"}
-              />
-              <FormHelperText id={"message-helper-text"}>
-                You can write your message here.
-              </FormHelperText>
-            </Grid>
+            <TextField
+              required
+              fullWidth
+              variant={"filled"}
+              id={"message"}
+              name={"message"}
+              label={"Message"}
+              value={message}
+              onChange={(event) => setMessage(event.target.value)}
+              multiline
+              minRows={8}
+              aria-describedby={"message-helper-text"}
+              type={"text"}
+            />
+            <FormHelperText id={"message-helper-text"}>
+              You can write your message here.
+            </FormHelperText>
 
-            <Grid item>
+            <Box display={"flex"} justifyContent={"center"}>
               <Button
                 disabled={isSubmitButtonDisabled}
                 type={"submit"}
@@ -138,9 +130,9 @@ export default function Contact() {
               >
                 Submit
               </Button>
-            </Grid>
-          </Grid>
-        </form>
+            </Box>
+          </form>
+        </Box>
       </Container>
       <Snackbar
         open={isSnackbarOpen}
