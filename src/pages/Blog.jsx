@@ -1,13 +1,14 @@
 import AnimatedPage from "../components/AnimatedPage.jsx";
+import { Container, Typography } from "@mui/material";
 
 export default function Blog() {
   return (
     <AnimatedPage>
-      <div className="mt-4 text-center">
-        <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white">
+      <Container>
+        <Typography variant={"h1"} gutterBottom>
           Blog
-        </h1>
-      </div>
+        </Typography>
+      </Container>
     </AnimatedPage>
   );
 }
