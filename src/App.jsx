@@ -11,6 +11,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { Box } from "@mui/material";
 import darkScrollbar from "@mui/material/darkScrollbar";
 import { blueGrey } from "@mui/material/colors";
+import NotFound from "./pages/NotFound.jsx";
 
 const darkTheme = createTheme({
   palette: {
@@ -53,6 +54,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
         <Footer marginBottom={"auto"} />
