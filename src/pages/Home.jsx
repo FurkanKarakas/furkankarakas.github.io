@@ -1,4 +1,4 @@
-import { Container, Typography, Button, Link } from "@mui/material";
+import { Container, Typography, Button, Link, Box } from "@mui/material";
 import AnimatedPage from "../components/AnimatedPage.jsx";
 import { Link as RouterLink } from "react-router-dom";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
@@ -31,14 +31,16 @@ export default function Home() {
           </Link>
           .
         </Typography>
-        <Button
-          variant="contained"
-          component={RouterLink}
-          to="/about"
-          endIcon={<ArrowForwardIcon />}
-        >
-          Learn more about me
-        </Button>
+        <Box display={"flex"} justifyContent={"center"} marginTop={7}>
+          <Button
+            variant="contained"
+            component={RouterLink}
+            to="/about"
+            endIcon={<ArrowForwardIcon />}
+          >
+            Learn more about me
+          </Button>
+        </Box>
       </Container>
     </AnimatedPage>
   );
