@@ -17,7 +17,7 @@ export default function Navbar() {
   const [rotate, setRotate] = useState(false);
 
   return (
-    <AppBar position="sticky">
+    <AppBar position="static">
       <Toolbar>
         <motion.div
           animate={{ rotate: rotate ? 360 : 0 }}

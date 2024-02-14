@@ -8,10 +8,13 @@ import Contact from "./pages/Contact.jsx";
 import Footer from "./pages/Footer.jsx";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import { Box } from "@mui/material";
+import { Box, Tooltip } from "@mui/material";
 import darkScrollbar from "@mui/material/darkScrollbar";
 import { blueGrey } from "@mui/material/colors";
 import NotFound from "./pages/NotFound.jsx";
+import Fab from "@mui/material/Fab";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import ScrollTop from "./components/ScrollTop.jsx";
 
 const darkTheme = createTheme({
   palette: {
@@ -39,6 +42,7 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
+      <span id="top-component"></span>
       <Box
         sx={{
           display: "flex",
@@ -60,6 +64,13 @@ function App() {
         </AnimatePresence>
         <Footer marginTop={"auto"} />
       </Box>
+      <ScrollTop>
+        <Tooltip title={"Scroll back to top"}>
+          <Fab size="small" aria-label="scroll back to top">
+            <KeyboardArrowUpIcon />
+          </Fab>
+        </Tooltip>
+      </ScrollTop>
     </ThemeProvider>
   );
 }

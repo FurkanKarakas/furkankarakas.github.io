@@ -22,7 +22,7 @@ export default function Footer({ marginTop }) {
         direction="row"
         alignItems="center"
         justifyContent="space-between"
-        marginX={5}
+        marginX={8}
         flexWrap="wrap"
       >
         <Stack
