@@ -13,6 +13,7 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import ScrollTop from "./components/ScrollTop.jsx";
 import { lazy } from "react";
 import LoadingComponent from "./components/LoadingComponent.jsx";
+import "./styles/styles.css";
 
 const Home = lazy(() => import("./pages/Home.jsx"));
 const About = lazy(() => import("./pages/About.jsx"));

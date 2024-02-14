@@ -1,7 +1,6 @@
 // noinspection SpellCheckingInspection
 
 import AnimatedPage from "../components/AnimatedPage.jsx";
-import "../styles/styles.css";
 import {
   Accordion,
   AccordionDetails,
