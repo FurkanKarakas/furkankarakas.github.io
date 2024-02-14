@@ -12,7 +12,7 @@ import {
   Typography,
 } from "@mui/material";
 
-import AnimatedPage from "../zcomponents/AnimatedPage.jsx";
+import AnimatedPage from "../components/AnimatedPage.jsx";
 
 export default function About() {
   const zzAgListItems = [
