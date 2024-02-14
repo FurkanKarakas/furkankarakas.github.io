@@ -1,7 +1,8 @@
-import { Container, Typography, Button, Link, Box } from "@mui/material";
-import AnimatedPage from "../components/AnimatedPage.jsx";
-import { Link as RouterLink } from "react-router-dom";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { Box, Button, Container, Link, Typography } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
+
+import AnimatedPage from "../components/AnimatedPage.jsx";
 
 export default function Home() {
   return (

@@ -1,16 +1,17 @@
-import { useState } from "react";
-import AnimatedPage from "../components/AnimatedPage";
 import {
   Alert,
   AlertTitle,
+  Box,
   Button,
   Container,
   FormHelperText,
   Snackbar,
   TextField,
   Typography,
-  Box,
 } from "@mui/material";
+import { useState } from "react";
+
+import AnimatedPage from "../components/AnimatedPage";
 
 export default function Contact() {
   const [email, setEmail] = useState("");

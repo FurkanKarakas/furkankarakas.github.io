@@ -1,6 +1,6 @@
 // noinspection SpellCheckingInspection
-
-import AnimatedPage from "../components/AnimatedPage.jsx";
+import { ExpandMore } from "@mui/icons-material";
+import FolderIcon from "@mui/icons-material/Folder";
 import {
   Accordion,
   AccordionDetails,
@@ -11,8 +11,8 @@ import {
   ListItemIcon,
   Typography,
 } from "@mui/material";
-import { ExpandMore } from "@mui/icons-material";
-import FolderIcon from "@mui/icons-material/Folder";
+
+import AnimatedPage from "../zcomponents/AnimatedPage.jsx";
 
 export default function About() {
   const zzAgListItems = [

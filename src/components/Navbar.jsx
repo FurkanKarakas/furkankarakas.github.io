@@ -1,17 +1,18 @@
-import { Link as RouterLink } from "react-router-dom";
 import {
   AppBar,
-  Toolbar,
-  IconButton,
-  SvgIcon,
-  Stack,
-  Divider,
-  Typography,
   Button,
+  Divider,
+  IconButton,
+  Stack,
+  SvgIcon,
+  Toolbar,
+  Typography,
 } from "@mui/material";
-import WebsiteLogo from "/favicon.svg?react";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Link as RouterLink } from "react-router-dom";
+
+import WebsiteLogo from "/favicon.svg?react";
 
 export default function Navbar() {
   const [rotate, setRotate] = useState(false);

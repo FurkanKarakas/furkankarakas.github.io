@@ -1,18 +1,19 @@
-import { AnimatePresence } from "framer-motion";
-import { Route, Routes, useLocation } from "react-router-dom";
-import Navbar from "./pages/Navbar.jsx";
-import Footer from "./pages/Footer.jsx";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
-import { Box, Tooltip } from "@mui/material";
-import darkScrollbar from "@mui/material/darkScrollbar";
-import { blueGrey } from "@mui/material/colors";
-import NotFound from "./pages/NotFound.jsx";
-import Fab from "@mui/material/Fab";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import ScrollTop from "./components/ScrollTop.jsx";
+import { Box, Tooltip } from "@mui/material";
+import CssBaseline from "@mui/material/CssBaseline";
+import Fab from "@mui/material/Fab";
+import { blueGrey } from "@mui/material/colors";
+import darkScrollbar from "@mui/material/darkScrollbar";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { AnimatePresence } from "framer-motion";
 import { lazy } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
+
+import Footer from "./components/Footer.jsx";
 import LoadingComponent from "./components/LoadingComponent.jsx";
+import Navbar from "./components/Navbar.jsx";
+import ScrollTop from "./components/ScrollTop.jsx";
+import NotFound from "./pages/NotFound.jsx";
 import "./styles/styles.css";
 
 const Home = lazy(() => import("./pages/Home.jsx"));

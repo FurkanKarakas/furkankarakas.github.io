@@ -1,6 +1,6 @@
-import useScrollTrigger from "@mui/material/useScrollTrigger";
-import Fade from "@mui/material/Fade";
 import Box from "@mui/material/Box";
+import Fade from "@mui/material/Fade";
+import useScrollTrigger from "@mui/material/useScrollTrigger";
 
 export default function ScrollTop({ children }) {
   const trigger = useScrollTrigger({

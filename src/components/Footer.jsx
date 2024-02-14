@@ -1,7 +1,6 @@
 // noinspection SpellCheckingInspection
-
 import { Copyright, Email, Instagram, LinkedIn } from "@mui/icons-material";
-import { Box, Typography, Link, Stack } from "@mui/material";
+import { Box, Link, Stack, Typography } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 
 export default function Footer({ marginTop }) {

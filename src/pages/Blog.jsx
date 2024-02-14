@@ -1,5 +1,6 @@
-import AnimatedPage from "../components/AnimatedPage.jsx";
 import { Container, Typography } from "@mui/material";
+
+import AnimatedPage from "../components/AnimatedPage.jsx";
 
 export default function Blog() {
   return (

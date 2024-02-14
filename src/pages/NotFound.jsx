@@ -1,6 +1,7 @@
 import { Container, Typography } from "@mui/material";
-import AnimatedPage from "../components/AnimatedPage.jsx";
+
 import DonkeyImage from "../assets/donkey.jpg";
+import AnimatedPage from "../components/AnimatedPage.jsx";
 
 export default function NotFound() {
   return (
