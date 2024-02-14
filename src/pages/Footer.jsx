@@ -1,6 +1,6 @@
 // noinspection SpellCheckingInspection
 
-import { Copyright, Email, Instagram } from "@mui/icons-material";
+import { Copyright, Email, Instagram, LinkedIn } from "@mui/icons-material";
 import { Box, Typography, Link, Stack } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -29,7 +29,7 @@ export default function Footer({ marginTop }) {
           display="flex"
           direction="row"
           justifyContent="flex-start"
-          spacing={2}
+          spacing={1}
         >
           <Stack display="flex" direction="row" spacing={0.5}>
             <Copyright fontSize="small" />
@@ -39,7 +39,7 @@ export default function Footer({ marginTop }) {
           </Stack>
           <Typography variant="body2" color="text.secondary">
             <Link to="/" component={RouterLink} color="inherit">
-              Website
+              furkankarakas.github.io
             </Link>{" "}
             {new Date().getFullYear()}
             {"."}
@@ -54,6 +54,18 @@ export default function Footer({ marginTop }) {
             underline="hover"
           >
             fkarakasster@gmail.com
+          </Link>
+        </Stack>
+
+        <Stack display="flex" direction="row" alignItems="center" spacing={0.5}>
+          <LinkedIn fontSize="medium" />
+          <Link
+            href="https://www.linkedin.com/in/furkan-karakas/"
+            target="_blank"
+            color="inherit"
+            underline="hover"
+          >
+            furkan-karakas
           </Link>
         </Stack>
 
