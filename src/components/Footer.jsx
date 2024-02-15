@@ -18,7 +18,7 @@ export default function Footer({ marginTop }) {
     >
       <Stack
         display="flex"
-        direction="row"
+        direction={{ xs: "column", md: "row" }}
         alignItems="center"
         justifyContent="space-between"
         marginX={8}
