@@ -18,18 +18,12 @@ export default function Footer({ marginTop }) {
     >
       <Stack
         display="flex"
-        direction={{ xs: "column", md: "row" }}
+        direction="column"
         alignItems="center"
-        justifyContent="space-between"
-        marginX={8}
         flexWrap="wrap"
+        spacing={0.5}
       >
-        <Stack
-          display="flex"
-          direction="row"
-          justifyContent="flex-start"
-          spacing={1}
-        >
+        <Stack display="flex" direction="row" spacing={1}>
           <Stack display="flex" direction="row" spacing={0.5}>
             <Copyright fontSize="small" />
             <Typography variant="body2" color="text.secondary">
@@ -45,7 +39,7 @@ export default function Footer({ marginTop }) {
           </Typography>
         </Stack>
 
-        <Stack display="flex" direction="row" alignItems="center" spacing={0.5}>
+        <Stack display="flex" direction="row" spacing={0.5}>
           <Email fontSize="medium" />
           <Link
             href={`mailto:fkarakasster@gmail.com?subject=${subject}&body=${body}`}
@@ -56,7 +50,7 @@ export default function Footer({ marginTop }) {
           </Link>
         </Stack>
 
-        <Stack display="flex" direction="row" alignItems="center" spacing={0.5}>
+        <Stack display="flex" direction="row" spacing={0.5}>
           <LinkedIn fontSize="medium" />
           <Link
             href="https://www.linkedin.com/in/furkan-karakas/"
@@ -68,7 +62,7 @@ export default function Footer({ marginTop }) {
           </Link>
         </Stack>
 
-        <Stack display="flex" direction="row" alignItems="center" spacing={0.5}>
+        <Stack display="flex" direction="row" spacing={0.5}>
           <Instagram fontSize="medium" />
           <Link
             href="https://www.instagram.com/furkan.karakas95/"
