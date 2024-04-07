@@ -1,3 +1,4 @@
+/*global Email: readonly*/
 import {
   Alert,
   AlertTitle,
@@ -26,7 +27,6 @@ export default function Contact() {
 
     const body = `Sender email: ${email}<br>Sender Message: ${message}`;
 
-    // eslint-disable-next-line no-undef
     Email.send({
       SecureToken: "102323f1-d771-4640-8098-063ade2b62b2",
       To: "fkarakasster@gmail.com",
