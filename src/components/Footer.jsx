@@ -1,5 +1,5 @@
 // noinspection SpellCheckingInspection
-import { Copyright, Email, Instagram, LinkedIn } from "@mui/icons-material";
+import { Copyright, Email, GitHub, LinkedIn } from "@mui/icons-material";
 import { Box, Link, Stack, Typography } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 
@@ -63,9 +63,9 @@ export default function Footer({ marginTop }) {
         </Stack>
 
         <Stack display="flex" direction="row" spacing={0.5}>
-          <Instagram fontSize="medium" />
+          <GitHub fontSize="medium" />
           <Link
-            href="https://www.instagram.com/furkan.karakas95/"
+            href="https://github.com/FurkanKarakas"
             target="_blank"
             color="inherit"
             underline="hover"

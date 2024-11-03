@@ -15,24 +15,22 @@ import {
 import AnimatedPage from "../components/AnimatedPage.jsx";
 
 export default function About() {
+  const pfAgListItems = [
+    "Automated independent end-to-end tests of the company web and mobile applications on the system level by means of black-box testing using an internal test automation toolbox built on top of Appium and Selenium",
+
+    "Worked in four releases in a year using agile methodology",
+
+    "Used the issue tracking service JIRA and the application lifecycle management tool HPQC",
+  ];
+
   const zzAgListItems = [
-    "Parsing errors in XML files after end-of-day data load to" +
-      " the system in Murex in the programming language Java 1.8",
+    'Developed internal "Knowledge Base" web app using React.js, Spring Boot, and PostgreSQL, streamlining business processes for 25+ colleagues',
 
-    'Developing and maintaining the web application "Knowledge Base"' +
-      " used internally with the front-end JavaScript library React.js," +
-      " the back-end Java framework Spring Boot, and the SQL database PostgreSQL",
+    "Built automated CI/CD pipelines using GitLab runners in Docker for seamless application deployment to prod/dev environments, over 80% improvement of build time of the web application",
 
-    "Creating automated CI/CD pipelines to install the dependencies in a project," +
-      " build it, and deploy it to the production and development servers" +
-      ' using "GitLab runners" in isolated Docker containers',
+    "Created in-house Value-at-Risk computation framework in Python integrated with company data warehouse using Pandas/NumPy",
 
-    "Creating in-house Value-at-Risk (VaR) computation framework in Python using" +
-      " the company data warehouse in Python 3.9 with the libraries Pandas and Numpy",
-
-    "Using the data integration tool Talend for ETL processes",
-
-    "Using the IDE products of JetBrains",
+    "Parsed XML files to identify data load errors in Java, enabling team to review and correct issues daily",
   ];
 
   const epflListItems = [
@@ -68,19 +66,52 @@ export default function About() {
             <Accordion component={"section"}>
               <AccordionSummary
                 expandIcon={<ExpandMore />}
-                aria-controls="zzag-content"
-                id="zzag-header"
+                aria-controls="pf-content"
+                id="pf-header"
               >
                 <Typography variant={"h6"}>
-                  ZZ Vermögensberatung AG, <em>July 2022-Present</em>
+                  PostFinance AG (External), <em>May 2024-Present</em>
                 </Typography>
               </AccordionSummary>
 
               <AccordionDetails>
                 <Typography variant={"body1"}>
-                  Currently, I am working in a financial asset management
-                  company as a software developer. In particular, my tasks
-                  comprise the following points:
+                  Currently, I am working in PostFinance AG in an external role
+                  as a software test engineer. My responsibilities comprise the
+                  following:
+                </Typography>
+
+                <List>
+                  {pfAgListItems.map((item, index) => {
+                    return (
+                      <ListItem key={index}>
+                        <ListItemIcon>
+                          <FolderIcon />
+                        </ListItemIcon>
+                        {item}
+                      </ListItem>
+                    );
+                  })}
+                </List>
+              </AccordionDetails>
+            </Accordion>
+
+            <Accordion component={"section"}>
+              <AccordionSummary
+                expandIcon={<ExpandMore />}
+                aria-controls="zzag-content"
+                id="zzag-header"
+              >
+                <Typography variant={"h6"}>
+                  ZZ Vermögensberatung AG, <em>July 2022-April 2024</em>
+                </Typography>
+              </AccordionSummary>
+
+              <AccordionDetails>
+                <Typography variant={"body1"}>
+                  In the past, I worked in a financial asset management company
+                  as a software developer. In particular, my tasks comprised the
+                  following points:
                 </Typography>
 
                 <List>
