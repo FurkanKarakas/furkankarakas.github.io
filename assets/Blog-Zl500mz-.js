@@ -1,0 +1,1 @@
+import{j as t,A as e,C as n,T as r}from"./index-7nhJncfU.js";function a(){return t.jsx(e,{children:t.jsx(n,{children:t.jsx(r,{variant:"h3",component:"h1",textAlign:"center",gutterBottom:!0,children:"Blog"})})})}export{a as default};
