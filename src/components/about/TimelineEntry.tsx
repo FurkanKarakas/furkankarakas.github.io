@@ -1,6 +1,11 @@
 import type { StaticImageData } from "next/image";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Accordion from "@mui/material/Accordion";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import AccordionSummary from "@mui/material/AccordionSummary";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import { Children } from "react";
 
 interface TimelineEntryProps {
   entryType: string;
@@ -23,17 +28,13 @@ export default function TimelineEntry({
   photo,
   children,
 }: TimelineEntryProps) {
-  return (
+  const summaryContent = (
     <Box
       sx={{
-        display: "flex",
+        display: "grid",
+        gridTemplateColumns: "100px 1fr",
         gap: 2,
-        alignItems: "flex-start",
-        p: 1.5,
-        border: 1,
-        borderColor: "divider",
-        borderRadius: 2,
-        bgcolor: "background.paper",
+        alignItems: "start",
       }}
     >
       {photo ? (
@@ -61,7 +62,7 @@ export default function TimelineEntry({
         />
       )}
 
-      <Box sx={{ flex: 1 }}>
+      <Box sx={{ minWidth: 0 }}>
         <Typography variant="h6" component="h3" sx={{ fontWeight: 600 }}>
           {entryType} at {instituteName}
         </Typography>
@@ -71,8 +72,24 @@ export default function TimelineEntry({
         <Typography variant="body2" color="text.secondary">
           {startYear} – {endYear}
         </Typography>
-        {children ? <Box sx={{ mt: 2 }}>{children}</Box> : null}
       </Box>
     </Box>
+  );
+
+  return (
+    <Accordion defaultExpanded disableGutters elevation={0}>
+      <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+        <Box sx={{ width: "100%", pr: 1 }}>{summaryContent}</Box>
+      </AccordionSummary>
+      {children ? (
+        <AccordionDetails>
+          {Children.toArray(children).map((child, index) => (
+            <Box key={index} sx={index === 0 ? undefined : { mt: 1 }}>
+              {child}
+            </Box>
+          ))}
+        </AccordionDetails>
+      ) : null}
+    </Accordion>
   );
 }

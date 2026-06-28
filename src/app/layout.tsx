@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PageTransition from "../components/PageTransition";
 import ThemeProviderWrapper from "../components/ThemeProviderWrapper";
+import BackToTopButton from "../components/BackToTopButton";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -46,6 +47,7 @@ export default function RootLayout({
                 <PageTransition>{children}</PageTransition>
               </main>
               <Footer />
+              <BackToTopButton />
             </div>
           </ThemeProviderWrapper>
         </AppRouterCacheProvider>

@@ -10,6 +10,17 @@ body {
   min-height: 100dvh;
 }
 
+p,
+li,
+blockquote,
+.MuiTypography-body1,
+.MuiTypography-body2,
+.MuiTypography-subtitle1,
+.MuiTypography-subtitle2 {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 * {
   box-sizing: border-box;
 }
