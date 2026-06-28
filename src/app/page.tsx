@@ -24,6 +24,7 @@ function TurkishLetterTooltip({ children }: { children: React.ReactNode }) {
         </Box>
       }
       arrow
+      placement="top"
       disableHoverListener={false}
       disableTouchListener={false}
       enterTouchDelay={0}
@@ -163,6 +164,7 @@ export default function Home() {
                 </Box>
               }
               arrow
+              placement="top"
               disableHoverListener={false}
               disableTouchListener={false}
               enterTouchDelay={0}
