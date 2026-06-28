@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
@@ -6,6 +7,10 @@ import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
 import Link from "../components/Link";
 import profileImage from "../assets/OCTS9246.jpg";
+
+export const metadata: Metadata = {
+  title: { absolute: "Home | Furkan Karakaş" },
+};
 
 function TurkishLetterTooltip({ children }: { children: React.ReactNode }) {
   return (
@@ -142,20 +147,34 @@ export default function Home() {
               justifyContent: "center",
             }}
           >
-            <Box
-              component="img"
-              src={profileImage.src}
-              alt="Furkan Karakaş"
-              sx={{
-                width: { xs: "100%", sm: 220, md: 220 },
-                height: { xs: "auto", sm: 220, md: 220 },
-                objectFit: "cover",
-                borderRadius: 3,
-                border: 1,
-                borderColor: "divider",
-                boxShadow: 2,
-              }}
-            />
+            <Tooltip
+              title={
+                <Box
+                  sx={{ display: "flex", alignItems: "center", gap: 1, p: 0.5 }}
+                >
+                  <Typography variant="body2">🇵🇹</Typography>
+                  <Typography variant="body2">
+                    Ericeira, Portugal, July 2025
+                  </Typography>
+                </Box>
+              }
+              arrow
+            >
+              <Box
+                component="img"
+                src={profileImage.src}
+                alt="Furkan Karakaş"
+                sx={{
+                  width: { xs: "100%", sm: 220, md: 220 },
+                  height: { xs: "auto", sm: 220, md: 220 },
+                  objectFit: "cover",
+                  borderRadius: 3,
+                  border: 1,
+                  borderColor: "divider",
+                  boxShadow: 2,
+                }}
+              />
+            </Tooltip>
           </Box>
         </Box>
 
