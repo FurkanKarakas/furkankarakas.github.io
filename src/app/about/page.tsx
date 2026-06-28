@@ -34,8 +34,8 @@ export default function AboutPage() {
             background, work experience, and personal life. I hope this gives
             you a better understanding of who I am and what I value! 😊
           </Typography>
-          <PastEducationSection />
           <WorkExperienceSection />
+          <PastEducationSection />
           <PersonalLifeSection />
         </Box>
       </Paper>
