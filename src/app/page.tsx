@@ -24,6 +24,10 @@ function TurkishLetterTooltip({ children }: { children: React.ReactNode }) {
         </Box>
       }
       arrow
+      disableHoverListener={false}
+      disableTouchListener={false}
+      enterTouchDelay={0}
+      leaveTouchDelay={2500}
     >
       <span>{children}</span>
     </Tooltip>
@@ -159,6 +163,10 @@ export default function Home() {
                 </Box>
               }
               arrow
+              disableHoverListener={false}
+              disableTouchListener={false}
+              enterTouchDelay={0}
+              leaveTouchDelay={2500}
             >
               <Box
                 component="img"
