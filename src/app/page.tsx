@@ -6,7 +6,7 @@ import Paper from "@mui/material/Paper";
 import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
 import Link from "../components/Link";
-import profileImage from "../assets/OCTS9246.jpg";
+import profileImage from "../assets/furkan-ericeira.jpg";
 
 export const metadata: Metadata = {
   title: { absolute: "Home | Furkan Karakaş" },
