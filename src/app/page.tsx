@@ -3,37 +3,14 @@ import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Paper from "@mui/material/Paper";
-import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
 import Link from "../components/Link";
-import profileImage from "../assets/furkan-ericeira.jpg";
+import TurkishLetterTooltip from "@/components/TurkishLetterTooltip";
+import HomePagePhotoWithTooltip from "@/components/HomePagePhotoWithTooltip";
 
 export const metadata: Metadata = {
   title: { absolute: "Home | Furkan Karakaş" },
 };
-
-function TurkishLetterTooltip({ children }: { children: React.ReactNode }) {
-  return (
-    <Tooltip
-      title={
-        <Box sx={{ p: 0.5 }}>
-          <Typography variant="body2">Unicode: U+015F</Typography>
-          <Typography variant="body2">
-            Appears in the Turkish alphabet.
-          </Typography>
-        </Box>
-      }
-      arrow
-      placement="top"
-      disableHoverListener={false}
-      disableTouchListener={false}
-      enterTouchDelay={0}
-      leaveTouchDelay={2500}
-    >
-      <span>{children}</span>
-    </Tooltip>
-  );
-}
 
 export default function Home() {
   return (
@@ -144,48 +121,7 @@ export default function Home() {
               for modern web automation.
             </Typography>
           </Box>
-
-          <Box
-            sx={{
-              width: { xs: "100%", md: 240 },
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            <Tooltip
-              title={
-                <Box
-                  sx={{ display: "flex", alignItems: "center", gap: 1, p: 0.5 }}
-                >
-                  <Typography variant="body2">🇵🇹</Typography>
-                  <Typography variant="body2">
-                    Ericeira, Portugal, July 2025
-                  </Typography>
-                </Box>
-              }
-              arrow
-              placement="top"
-              disableHoverListener={false}
-              disableTouchListener={false}
-              enterTouchDelay={0}
-              leaveTouchDelay={2500}
-            >
-              <Box
-                component="img"
-                src={profileImage.src}
-                alt="Furkan Karakaş"
-                sx={{
-                  width: { xs: "100%", sm: 220, md: 220 },
-                  height: { xs: "auto", sm: 220, md: 220 },
-                  objectFit: "cover",
-                  borderRadius: 3,
-                  border: 1,
-                  borderColor: "divider",
-                  boxShadow: 2,
-                }}
-              />
-            </Tooltip>
-          </Box>
+          <HomePagePhotoWithTooltip />
         </Box>
 
         <Box sx={{ display: "flex", justifyContent: "center", mt: 3 }}>

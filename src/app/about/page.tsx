@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import PastEducationSection from "../../components/about/PastEducationSection";
 import WorkExperienceSection from "../../components/about/WorkExperienceSection";
 import PersonalLifeSection from "../../components/about/PersonalLifeSection";
+import { Link } from "@mui/material";
 
 export const metadata: Metadata = {
   title: "About",
@@ -33,6 +34,17 @@ export default function AboutPage() {
             this section, you will find information about my educational
             background, work experience, and personal life. I hope this gives
             you a better understanding of who I am and what I value! 😊
+          </Typography>
+          <Typography variant="body1" color="textPrimary" sx={{ mt: 2 }}>
+            You can also find my up-to-date CV{" "}
+            <Link
+              href="https://cdn.jsdelivr.net/gh/FurkanKarakas/furkan-render-cv@master/rendercv_output/Furkan_Karakas_CV.pdf"
+              target="_blank"
+              rel="noopener"
+            >
+              here
+            </Link>
+            .
           </Typography>
           <WorkExperienceSection />
           <PastEducationSection />
